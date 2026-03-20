@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, type RefObject } from 'react';
+import { useEffect, type RefObject } from 'react';
 
 interface Star {
   x: number;
@@ -11,9 +11,7 @@ interface Star {
   phase: number;
 }
 
-export function useStars(): RefObject<HTMLDivElement | null> {
-  const ref = useRef<HTMLDivElement | null>(null);
-
+export function useStars(ref: RefObject<HTMLDivElement | null>) {
   useEffect(() => {
     const container = ref.current;
     if (!container) return;
@@ -74,7 +72,5 @@ export function useStars(): RefObject<HTMLDivElement | null> {
       window.removeEventListener('resize', resize);
       canvas.remove();
     };
-  }, []);
-
-  return ref;
+  }, [ref]);
 }

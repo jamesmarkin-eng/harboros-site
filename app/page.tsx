@@ -1,12 +1,14 @@
 'use client';
 
+import { useRef } from 'react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { useStars } from '@/hooks/useStars';
 import styles from './home.module.css';
 
 export default function HomePage() {
   useScrollReveal();
-  const starsRef = useStars();
+  const starsRef = useRef<HTMLDivElement | null>(null);
+  useStars(starsRef);
 
   return (
     <>
