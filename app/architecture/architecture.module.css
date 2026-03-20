@@ -1,0 +1,313 @@
+/* ═══════════════════════════════════════
+   HERO
+═══════════════════════════════════════ */
+.hero {
+  min-height: 60vh;
+  background: var(--navy);
+  padding: 120px 60px 80px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(212,168,67,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,168,67,0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, black 20%, transparent 70%);
+}
+.heroInner {
+  max-width: 720px;
+  position: relative;
+  z-index: 1;
+}
+.heroTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 400;
+  color: var(--off-white);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.heroSub {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(247,246,243,0.52);
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+/* ═══════════════════════════════════════
+   SHARED SECTION STYLES
+═══════════════════════════════════════ */
+.sectionEyebrow {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sectionEyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.5;
+}
+
+/* ═══════════════════════════════════════
+   CONTENT SECTIONS (alternating)
+═══════════════════════════════════════ */
+.section {
+  padding: 96px 60px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.sectionWhite { background: var(--white); }
+.sectionOffWhite { background: var(--off-white); }
+.sectionNavy {
+  background: var(--navy);
+  padding: 96px 60px;
+}
+.sectionNavyInner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 400;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.sectionTitleLight {
+  font-family: var(--font-serif);
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 400;
+  color: var(--off-white);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.sectionBody {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--mid-gray);
+  line-height: 1.7;
+  max-width: 640px;
+}
+.sectionBodyLight {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(247,246,243,0.45);
+  line-height: 1.7;
+  max-width: 640px;
+}
+.divider {
+  max-width: 960px;
+  margin: 0 auto;
+  border: none;
+  border-top: 1px solid rgba(20,28,46,0.06);
+}
+
+/* ═══════════════════════════════════════
+   LIFECYCLE DIAGRAM
+═══════════════════════════════════════ */
+.lifecycle {
+  margin: 40px 0 0;
+  display: flex;
+  align-items: flex-start;
+}
+.lifecycleStage {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+.lifecycleStageLabel {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.lifecycleStageDesc {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--mid-gray);
+  line-height: 1.5;
+  padding: 0 8px;
+}
+.lifecycleArrow {
+  display: flex;
+  align-items: center;
+  padding-top: 4px;
+}
+.lifecycleArrow span {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  color: var(--gold);
+  opacity: 0.5;
+}
+
+/* ═══════════════════════════════════════
+   CAPABILITY CARDS
+═══════════════════════════════════════ */
+.capabilityGrid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.capabilityCard {
+  background: var(--white);
+  border: 1px solid rgba(20,28,46,0.08);
+  border-left: 2px solid rgba(212,168,67,0.4);
+  border-radius: 3px;
+  padding: 24px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.capabilityCard:hover {
+  box-shadow: 0 8px 32px rgba(20,28,46,0.08);
+  transform: translateY(-2px);
+}
+.capabilityCard h3 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.capabilityCard p {
+  font-size: 13px;
+  color: var(--mid-gray);
+  line-height: 1.6;
+}
+
+/* ═══════════════════════════════════════
+   CTA
+═══════════════════════════════════════ */
+.ctaSection {
+  background: var(--navy);
+  padding: 0 60px 130px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.ctaSection::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 700px 400px at 50% 100%, rgba(212,168,67,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.ctaDivider {
+  width: 1px;
+  height: 80px;
+  background: rgba(255,255,255,0.07);
+  margin: 0 auto 60px;
+}
+.ctaTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 400;
+  color: var(--off-white);
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+  position: relative;
+}
+.ctaSub {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(247,246,243,0.44);
+  margin-bottom: 32px;
+  position: relative;
+}
+.btnPrimary {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--navy);
+  background: var(--gold);
+  padding: 18px 48px;
+  border-radius: 2px;
+  text-decoration: none;
+  box-shadow: 0 4px 40px rgba(212,168,67,0.18);
+  transition: opacity 0.2s, transform 0.2s;
+  position: relative;
+}
+.btnPrimary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* ═══════════════════════════════════════
+   FOUNDER (navy bg)
+═══════════════════════════════════════ */
+.founderSection {
+  background: var(--navy);
+  padding: 110px 60px;
+  text-align: center;
+}
+.founderInner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.founderRule {
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0 auto 24px;
+}
+.founderTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--off-white);
+  line-height: 1.35;
+  margin-bottom: 20px;
+}
+.founderBody {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(247,246,243,0.45);
+  line-height: 1.65;
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .hero { padding: 110px 28px 64px; }
+  .section { padding: 64px 28px; }
+  .sectionNavy { padding: 64px 28px; }
+  .lifecycle { flex-direction: column; gap: 16px; }
+  .lifecycleArrow { justify-content: center; padding: 0; }
+  .lifecycleArrow span { transform: rotate(90deg); }
+  .capabilityGrid { grid-template-columns: 1fr; }
+  .ctaSection { padding: 0 28px 80px; }
+  .founderSection { padding: 64px 28px; }
+}
