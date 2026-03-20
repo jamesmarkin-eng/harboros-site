@@ -23,7 +23,10 @@
   --green-dim:  rgba(29, 158, 117, 0.15);
   --border:     rgba(247, 246, 243, 0.08);
   --border-mid: rgba(247, 246, 243, 0.15);
+}
 
+/* Font aliases must live on body where next/font injects --font-* variables */
+body {
   --serif:  var(--font-instrument-serif), Georgia, serif;
   --sans:   var(--font-dm-sans), system-ui, sans-serif;
   --mono:   var(--font-dm-mono), 'Consolas', monospace;
