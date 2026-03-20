@@ -133,7 +133,6 @@
   animation: scrollPulse 2s ease-in-out infinite;
 }
 
-:global(.scrollPulse) { }
 @keyframes scrollPulse {
   0%, 100% { opacity: 0.4; transform: scaleY(1); }
   50% { opacity: 1; transform: scaleY(1.2); }
