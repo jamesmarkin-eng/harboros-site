@@ -63,6 +63,7 @@ export default function RootLayout({
             <Link href="/">Home</Link>
             <Link href="/architecture">Architecture</Link>
             <Link href="/lighthouse">Lighthouse</Link>
+            <Link href="/founder">Founder</Link>
             <a href="mailto:hello@harboros.co?subject=Demo Request" className="nav-cta">
               Request Demo
             </a>
