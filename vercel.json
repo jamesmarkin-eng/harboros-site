@@ -1,6 +1,3 @@
 {
-  "rewrites": [
-    { "source": "/architecture", "destination": "/architecture.html" },
-    { "source": "/lighthouse", "destination": "/lighthouse.html" }
-  ]
+  "rewrites": []
 }

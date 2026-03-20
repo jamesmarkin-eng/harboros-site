@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --navy: #141C2E;
+  --navy-mid: #1E2A42;
+  --off-white: #F7F6F3;
+  --white: #FFFFFF;
+  --mid-gray: #8A8A8A;
+  --gold: #D4A843;
+  --red: #C8392B;
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
+  --font-ui: var(--font-syne), sans-serif;
+  --font-body: var(--font-dm-sans), sans-serif;
+  --font-mono: var(--font-dm-mono), monospace;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--off-white);
+  color: var(--navy);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.85s cubic-bezier(0.22,1,0.36,1),
+              transform 0.85s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.d1 { transition-delay: 0.10s; }
+.d2 { transition-delay: 0.22s; }
+.d3 { transition-delay: 0.34s; }
+.d4 { transition-delay: 0.46s; }
