@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
+import Link from 'next/link';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { useStars } from '@/hooks/useStars';
 import styles from './home.module.css';
@@ -26,9 +27,9 @@ export default function HomePage() {
             a live renewals table. One session.
           </p>
           <div className={`${styles.heroActions} reveal d2`}>
-            <a href="/lighthouse" className={styles.btnPrimary}>
+            <Link href="/lighthouse" className={styles.btnPrimary}>
               See How It Works →
-            </a>
+            </Link>
           </div>
         </div>
         <div className={styles.scrollHint}>
@@ -81,9 +82,9 @@ export default function HomePage() {
           Every dollar of ARR traceable. Every forecast defensible.
         </p>
         <div className={`${styles.closeActions} reveal d3`}>
-          <a href="/lighthouse" className={styles.btnPrimary}>
+          <Link href="/lighthouse" className={styles.btnPrimary}>
             Explore the Lighthouse →
-          </a>
+          </Link>
           <a href="mailto:hello@harboros.co" className={styles.btnGhost}>
             Request a Demo
           </a>
