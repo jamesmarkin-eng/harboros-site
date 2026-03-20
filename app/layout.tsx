@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Instrument_Serif, Syne, DM_Sans, DM_Mono } from "next/font/google";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const instrumentSerif = Instrument_Serif({
@@ -25,8 +27,8 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HarborOS",
-  description: "HarborOS — Operational infrastructure for modern family offices",
+  title: "HarborOS — The CFO Intelligence Layer",
+  description: "The CFO intelligence layer for PE-backed software companies.",
 };
 
 export default function RootLayout({
@@ -35,11 +37,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${instrumentSerif.variable} ${syne.variable} ${dmSans.variable} ${dmMono.variable}`}
-      >
+    <html
+      lang="en"
+      className={`${instrumentSerif.variable} ${syne.variable} ${dmSans.variable} ${dmMono.variable}`}
+    >
+      <body>
+        <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -1,0 +1,14 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'The Contextual Lighthouse — HarborOS',
+  description: 'Your operating logic, written once. Applied to every contract import, automatically.',
+}
+
+export default function LighthouseLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return children
+}
