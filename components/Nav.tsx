@@ -41,20 +41,10 @@ export default function Nav() {
         <span className="nav-wordmark">Harbor<sup>OS</sup></span>
       </Link>
       <div className="nav-links">
-        {isHome ? (
-          <>
-            <a href="#lighthouse" className="nav-link">Lighthouse</a>
-            <a href="#architecture" className="nav-link">Architecture</a>
-            <a href="#output" className="nav-link">Output</a>
-          </>
-        ) : (
-          <>
-            <Link href="/" className="nav-link">Home</Link>
-            <Link href="/architecture" className={`nav-link${pathname === '/architecture' ? ' active' : ''}`}>Architecture</Link>
-            <Link href="/lighthouse" className={`nav-link${pathname === '/lighthouse' ? ' active' : ''}`}>Lighthouse</Link>
-            <Link href="/founder" className={`nav-link${pathname === '/founder' ? ' active' : ''}`}>Founder</Link>
-          </>
-        )}
+        {!isHome && <Link href="/" className="nav-link">Home</Link>}
+        <Link href="/architecture" className={`nav-link${pathname === '/architecture' ? ' active' : ''}`}>Architecture</Link>
+        <Link href="/lighthouse" className={`nav-link${pathname === '/lighthouse' ? ' active' : ''}`}>Lighthouse</Link>
+        <Link href="/founder" className={`nav-link${pathname === '/founder' ? ' active' : ''}`}>Founder</Link>
         <a href="mailto:hello@harboros.co" className="nav-cta">Request Access</a>
       </div>
     </nav>
